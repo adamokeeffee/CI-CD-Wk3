@@ -22,10 +22,16 @@ public class ProductController {
         Product myProduct = new Product("Tv", 499);
         return myList;
     }
-    @PostMapping("/addProject")
+    @PostMapping("/addProduct")
     public Product addProduct(@RequestBody Product myProduct)
     {
         myList.add(myProduct);
         return myProduct;
+    }
+
+    @PostMapping("/addlistProducts")
+      public List<Product> addProduct(@RequestBody List<Product> Product) {
+        myList.addAll(Product);
+        return myList;
     }
 }
