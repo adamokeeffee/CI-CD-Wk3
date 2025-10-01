@@ -16,11 +16,11 @@ public class ProductController {
         return "hello";
     }
 
-    @GetMapping("/getproduct")
-    public Product getProduct()
+    @GetMapping("/getproducts")
+    public List<Product> getProduct()
     {
         Product myProduct = new Product("Tv", 499);
-        return myProduct;
+        return myList;
     }
     @PostMapping("/addProject")
     public Product addProduct(@RequestBody Product myProduct)
