@@ -1,13 +1,17 @@
 package ie.atu.week3lab;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Positive;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 //@Data
-//@AllArgsConstructor
+//@AllArgsConstructor     not working need manual constructors and getters setters
 
 public class Product {
+    @NotBlank
     private String productName;
+    @Positive
     private double price;
 
     public Product(String productName, double price) {
