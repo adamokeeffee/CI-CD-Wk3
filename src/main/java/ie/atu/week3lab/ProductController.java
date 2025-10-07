@@ -35,4 +35,10 @@ public class ProductController {
         myList.addAll(Product);
         return myList;
     }
+
+    @GetMapping("/ProductC")
+    public int ProductC() {
+        return myList.size();
+    }
+
 }
